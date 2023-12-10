@@ -5,13 +5,13 @@ function biggerMapMod(api){
 	// Bigger Map
 	
 	// Set the X and Y number of tiles
-	// Normal is 40 x 40
-	api.registries.mapLayout.findById("tutorial").__proto__.getNumTilesX = function(){return 150};
-	api.registries.mapLayout.findById("tutorial").__proto__.getNumTilesY = function(){return 150};
-	api.registries.mapLayout.findById("desert").__proto__.getNumTilesX = function(){return 150};
-	api.registries.mapLayout.findById("desert").__proto__.getNumTilesY = function(){return 150};
-	api.registries.mapLayout.findById("ice").__proto__.getNumTilesX = function(){return 150};
-	api.registries.mapLayout.findById("ice").__proto__.getNumTilesY = function(){return 150};
+	// Normal is 30 x 30
+	api.registries.mapLayout.findById("tutorial").__proto__.getNumTilesX = function(){return 113};
+	api.registries.mapLayout.findById("tutorial").__proto__.getNumTilesY = function(){return 113};
+	api.registries.mapLayout.findById("desert").__proto__.getNumTilesX = function(){return 188};
+	api.registries.mapLayout.findById("desert").__proto__.getNumTilesY = function(){return 188};
+	api.registries.mapLayout.findById("ice").__proto__.getNumTilesX = function(){return 90};
+	api.registries.mapLayout.findById("ice").__proto__.getNumTilesY = function(){return 90};
 	
 	// Set Resource Count Multiplier
 	// Note : To have the same ammount of resource density you need to take your (X * Y) devided by (40 * 40). Set this as the resource multiplier.
@@ -29,21 +29,21 @@ function biggerMapMod(api){
   }};
 
 	api.registries.mapLayout.findById("desert").__proto__.getResourceCounts = function(){return {
-		crystal: 12 * resourceCountMult,
-		tree: 19 * resourceCountMult,
-    rock: 9 * resourceCountMult,
+		crystal: 11 * resourceCountMult,
+		tree: 10 * resourceCountMult,
+    rock: 16 * resourceCountMult,
     ironore: 7 * resourceCountMult,
-    coalore: 5 * resourceCountMult,
-    uraniumore: 3 * resourceCountMult
+    coalore: 7 * resourceCountMult,
+    uraniumore: 4 * resourceCountMult
   }};
 
 	api.registries.mapLayout.findById("ice").__proto__.getResourceCounts = function(){return {
-		crystal: 12 * resourceCountMult,
-		tree: 19 * resourceCountMult,
-    rock: 9 * resourceCountMult,
-    ironore: 7 * resourceCountMult,
-    coalore: 5 * resourceCountMult,
-    uraniumore: 3 * resourceCountMult
+		crystal: 6 * resourceCountMult,
+		tree: 4 * resourceCountMult,
+    rock: 4 * resourceCountMult,
+    ironore: 2 * resourceCountMult,
+    coalore: 1 * resourceCountMult,
+    uraniumore: 1 * resourceCountMult
   }};
 
 	// Define mod implementation function to get root
